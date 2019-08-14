@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Learn Vue</title>
+    <script src="../assets/js/vue/vue.min.js"></script>
+</head>
+<style type="text/css">
+.title{
+    color: green;
+}
+</style>
+<body>
+    <div id="app">
+        <h1 v-once>{{ message }}</h1>
+        <h1 v-bind:class="class_h1"> {{ message }} </h1>
+        <h1 v-html="title"></h1>
+    </div>
+ 
+</body>
+<script type="text/javascript">
+    var vm = new Vue({
+              el: '#app',
+                  data: {
+                        message: 'Hello world!',
+                        title : '<span style="color:red">Hello World!</a>',
+                        class_h1: 'title'
+              }
+      })
+      </script>
+</html>
